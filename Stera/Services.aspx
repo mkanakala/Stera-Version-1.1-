@@ -85,7 +85,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       </label>
       <ul>
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="About.aspx">About</a></li>
+        <li><a href="Contact.aspx">Contact</a></li>
         <li><a href="Services.aspx">Services</a></li>
         <li><a href="Register.aspx">Register</a></li>
       </ul>

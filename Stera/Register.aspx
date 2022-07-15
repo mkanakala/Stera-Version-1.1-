@@ -31,7 +31,7 @@
       </label>
       <ul>
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="Contact.aspx">About</a></li>
+        <li><a href="Contact.aspx">Contact</a></li>
         <li><a href="Services.aspx">Services</a></li>
         <li><a href="Register.aspx">Register</a></li>
       </ul>
