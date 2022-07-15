@@ -14,14 +14,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-  <%--<link href="home.css" rel="stylesheet" type="text/css" />--%>
+
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link href="Contact.css" rel="stylesheet" type="text/css" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-    <nav>
+  
+
+  
+<nav>
       <div class="logo">Stera</div>
       <input type="checkbox" id="click">
       <label for="click" class="menu-btn">
@@ -34,50 +37,37 @@
         <li><a href="Register.aspx">Register</a></li>
       </ul>
     </nav>
-  <div class="container">
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Address</div>
-          <div class="text-one">Surkhet, NP12</div>
-          <div class="text-two">Birendranagar 06</div>
-        </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="topic">Phone</div>
-          <div class="text-one">+0098 9893 5647</div>
-          <div class="text-two">+0096 3434 5678</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="topic">Email</div>
-          <div class="text-one">codinglab@gmail.com</div>
-          <div class="text-two">info.codinglab@gmail.com</div>
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="topic-text">Send us a message</div>
-        <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Enter your name">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your email">
-        </div>
-        <div class="input-box message-box">
-          
-        </div>
-        <div class="button">
-          <input type="button" value="Send Now" >
-        </div>
+<br>
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>S:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="https://assets-global.website-files.com/5e691d4ba86b4465e2902add/5e6ad77bd08b120ff68b3e6f_Tick%20Guard%20Icon.png" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
       </form>
     </div>
-    </div>
   </div>
-</body>
-</html>
+</div>
+
+
         </div>
     </form>
 </body>
