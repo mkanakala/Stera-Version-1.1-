@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Stera.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Stera</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="CSS/home.css" rel="stylesheet" type="text/css" />
+    <%--<link href="CSS/Register.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Contact.css" rel="stylesheet" type="text/css" />--%>
+    <!-- Fontawesome CDN Link -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- ===== Link to CSS ===== -->
+    <link rel='stylesheet' type='text/css' media='screen' href='home.css'>
+
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <script src="https://kit.fontawesome.com/8b4203e853.js" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <div class="logo">Stera</div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="Contact.aspx">Contact</a></li>
+                <li><a href="Register.aspx">Register</a></li>
+            </ul>
+        </nav>
+        <br />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- ==== FOOTER ==== -->
+        <hr class="divider">
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-special">
+                        <img src="Stera.PNG" class="footer-logo">
+                        <p>Here at Stera, ...</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col-container">
+                        <div class="footer-col">
+                            <h4>Stera</h4>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Policies</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Support Center</a></li>
+                                <li><a href="#">Payment Options</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Contractors</h4>
+                            <ul>
+                                <li><a href="#">Blank</a></li>
+                                <li><a href="#">Blank</a></li>
+                                <li><a href="#">Blank</a></li>
+                                <li><a href="#">Blank</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <hr id="copyright-divider">
+        <p>j</p>
+    
+    </form>
+</body>
+</html>

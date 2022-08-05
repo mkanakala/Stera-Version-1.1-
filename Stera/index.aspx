@@ -1,62 +1,1475 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Stera.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Stera.Services1" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <body>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="home.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-   <!--------- <title>Responsive Navigation Menu</title>------>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <nav>
-      <div class="logo">Stera</div>
-      <input type="checkbox" id="click">
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="Contact.aspx">Contact</a></li>
-        <li><a href="Services.aspx">Services</a></li>
-        <li><a href="Register.aspx">Register</a></li>
-      </ul>
-    </nav>
-    <div class="content">
-      <div>Stera</div>
-      <div>a better alternative to the age-old methods of negotiation, focused in the home service market</div>
-    </div>
-
-  </body>
-</html>
-
-
-</body>
-</html>
-
+        <!-- ==== HEADER ==== -->
+        <div class="header">
+            <div class="header-content">
+                <h1 id="header-slogan">Get work done</h1>
+                <p id="header-description">Join with others to get the best deals and give contractors job security</p>
+                <div>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" id="search1" placeholder="Search by city, service, or contractor">
+                </div>
+            </div>
         </div>
-    </form>
-</body>
-</html>
+        <!--Include a location and date filter like Seatgeek-->
+        <!--Seatgeek has a great process at which the homepage cards are decided by the location and date filter-->
+        <!--Each card section will have cards of different services, but they will all be in same location given that people can only shop in the location their house is in, they don't care about offerings in other places-->
+
+        <!-- ==== SERVICES ==== -->
+        <div class="services-header-container">
+            <h2 id="services-header">Popular Services</h2>
+        </div>
+        <div class="popular-services-container" id="top-container">
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Painting</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Deck</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Electrical</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Drywall</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+        </div>
+        <div class="popular-services-container">
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Flooring</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Plumbing</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Lawn</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+            <a href="#" class="popular-service">
+                <img src="../images/paint.png" alt="">
+                <div class="services-txt">
+                    <h1>Fencing</h1>
+                    <p>Starting at $10</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- ==== CARDS ==== -->
+        <div class="card-container">
+
+            <div class="swiper mySwiper container">
+                <h1>Best Deals</h1>
+                <div class="swiper-wrapper content">
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!--<div class="swiper-pagination"></div>-->
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                slidesPerGroup: 4,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+
+
+
+        <div class="card-container">
+
+            <div class="swiper mySwiper container">
+                <h1>Top Rated</h1>
+                <div class="swiper-wrapper content">
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!--<div class="swiper-pagination"></div>-->
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                slidesPerGroup: 4,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+
+
+
+        <!-- ==== SEASONS TILES ==== -->
+        <section class="seasons-container">
+            <a href="#" class="season-card">
+                <div class="season-image" id="fall"></div>
+                <h1 class="price-text">Fall</h1>
+            </a>
+            <a href="#" class="season-card">
+                <div class="season-image" id="winter"></div>
+                <h1 class="price-text">Winter</h1>
+            </a>
+        </section>
+        <section class="seasons-container">
+            <a href="#" class="season-card">
+                <div class="season-image" id="summer"></div>
+                <h1 class="price-text">Summer</h1>
+            </a>
+            <a href="#" class="season-card">
+                <div class="season-image" id="spring"></div>
+                <h1 class="price-text">Spring</h1>
+            </a>
+        </section>
+
+        <div class="card-container">
+
+            <div class="swiper mySwiper container">
+                <h1>Most Signed Up</h1>
+                <div class="swiper-wrapper content">
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div class="image">
+                                <img src="../images/Manas_House.PNG" alt="">
+                            </div>
+                            <div class="card-details">
+                                <div class="progress">
+                                    <p>7 out of 10</p>
+                                    <div class="progress-bar">
+                                        <div class="progress-done" data-done="70">70%</div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const progress = document.querySelector('.progress-done');
+                                    progress.style.width = progress.getAttribute('data-done') + '%';
+                                    progress.style.opacity = 1;
+                                </script>
+                                <div class="contractor">
+                                    <div class="contractor-name">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Manas Kanakala</p>
+                                    </div>
+                                    <div class="rating">
+                                        <p>2.8</p>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <p>Plumbing</p>
+                                </div>
+                                <div class="location">
+                                    <p>Redmond, Washington</p>
+                                </div>
+                                <div class="date">
+                                    <p>Aug 13 - Sep 5</p>
+                                </div>
+                                <div class="price">
+                                    <p class="old-price">$420</p>
+                                    <p class="discounted-price">$68</p>
+                                    <div class="discount">
+                                        <p>84% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!--<div class="swiper-pagination"></div>-->
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                slidesPerGroup: 4,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+
+
+
+        <!-- ==== FOR CONTRACTORS ==== -->
+        <div class="contractors-container">
+            <div class="contractors-text">
+                <h1>Grow your network</h1>
+                <p>Find out how to reach more clients and have your schedule packed </p>
+                <a href="#">
+                    <button>Learn more</button>
+                </a>
+            </div>
+        </div>
+    </body>
+</asp:Content>
