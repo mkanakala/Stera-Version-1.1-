@@ -31,6 +31,7 @@
 <body>
     <form id="form1" runat="server">
         <header>
+           <%-- <img class="logo" src="../images/logo1.png"--%>
         <nav>
             <ul class="nav__links">
                 <li><a href="#">Home</a></li>
@@ -38,8 +39,9 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+            <a class="cta" href="#"><button>Contact</button></a>
         </header>
-        <a class="cta" href="#"><button>Contact</button></a>
+        
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

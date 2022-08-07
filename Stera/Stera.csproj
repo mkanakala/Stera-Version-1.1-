@@ -68,10 +68,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Stera.dll" />
+    <Content Include="bin\Stera.pdb" />
     <Content Include="Contact.aspx" />
     <Content Include="CSS\navbar.css" />
     <Content Include="CSS\signup.css" />
     <Content Include="CSS\home.css" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\Fall.jpg" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\magnifying-glass-solid.svg" />
+    <Content Include="images\Manas_House.png" />
+    <Content Include="images\paint.png" />
+    <Content Include="images\Spring.jpg" />
+    <Content Include="images\Stera.png" />
+    <Content Include="images\Summer.jpg" />
+    <Content Include="images\tools3.jpg" />
+    <Content Include="images\Winter.jpg" />
     <Content Include="Register.aspx" />
     <Content Include="index.aspx" />
     <Content Include="scripts\signup.js" />
@@ -110,6 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />
+    <Content Include="bin\Stera.dll.config" />
+    <Content Include="images\sunset.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -118,9 +135,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
