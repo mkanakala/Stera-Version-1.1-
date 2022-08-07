@@ -1,73 +1,201 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Stera.Register1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link href="CSS/signup.css" rel="stylesheet" type="text/css" />
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Responsive Regisration Form </title>--> 
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" placeholder="Enter your ccupation" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Identity Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>ID Type</label>
+                            <input type="text" placeholder="Enter ID type" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="number" placeholder="Enter ID number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued Authority</label>
+                            <input type="text" placeholder="Enter issued authority" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued State</label>
+                            <input type="text" placeholder="Enter issued state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued Date</label>
+                            <input type="date" placeholder="Enter your issued date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter expiry date" required>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input type="text" placeholder="Permanent or Temporary" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" placeholder="Enter nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter your state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" placeholder="Enter your district" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input type="number" placeholder="Enter block number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="number" placeholder="Enter ward number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text" placeholder="Enter father name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter mother name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text" placeholder="Enter grandfther name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text" placeholder="Father in law name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" placeholder="Mother in law name" required>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="scripts/signup.js"></script>
+</body>
+</html>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
-        <input type="checkbox" id="flip">
-        <div class="cover">
-            <div class="front">
-                <!--<img src="images/frontImg.jpg" alt="">-->
-                <div class="text">
-                    <span class="text-1">Every new friend is a
-                        <br>
-                        new adventure</span>
-                    <span class="text-2">Let's get connected</span>
-                </div>
-            </div>
-            <div class="back">
-                <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
-                <div class="text">
-                    <span class="text-1">Complete miles of journey
-                        <br>
-                        with one step</span>
-                    <span class="text-2">Let's get started</span>
-                </div>
-            </div>
-        </div>
-        <div class="forms">
-            <div class="form-content">
-                <div class="login-form">
-                    <div class="title">Login</div>
-                    <form action="#">
-                        <div class="input-boxes">
-                            <div class="input-box">
-                                <i class="fas fa-envelope"></i>
-                                <input type="text" placeholder="Enter your email" required>
-                            </div>
-                            <div class="input-box">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Enter your password" required>
-                            </div>
-                            <div class="text"><a href="#">Forgot password?</a></div>
-                            <div class="button input-box">
-                                <input type="submit" value="Sumbit">
-                            </div>
-                            <div class="text sign-up-text">Don't have an account?
-                                <label for="flip">Signup now</label></div>
-                        </div>
-                    </form>
-                </div>
-                <div class="signup-form">
-                    <div class="title">Signup</div>
-                        <div class="input-boxes">
-                            <div class="input-box">
-                                <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Enter your name" required>
-                            </div>
-                            <div class="input-box">
-                                <i class="fas fa-envelope"></i>
-                                <input type="text" placeholder="Enter your email" required>
-                            </div>
-                            <div class="input-box">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Enter your password" required>
-                            </div>
-                            <div class="button input-box">
-                                <input type="submit" value="Submit">
-                            </div>
-                            <div class="text sign-up-text">Already have an account?
-                                <label for="flip">Login now</label></div>
-                        </div>
-                        </div>
+    
 </asp:Content>

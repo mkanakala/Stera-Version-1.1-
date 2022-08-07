@@ -30,20 +30,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <header>
         <nav>
-            <div class="logo">Stera</div>
-            <input type="checkbox" id="click">
-            <label for="click" class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="Contact.aspx">Contact</a></li>
-                <li><a href="Register.aspx">Register</a></li>
+            <ul class="nav__links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <br />
-        <div>
+        </header>
+        <a class="cta" href="#"><button>Contact</button></a>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
