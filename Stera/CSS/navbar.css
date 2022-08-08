@@ -1,1 +1,59 @@
-﻿
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6),url(../images/banner.PNG);
+    background-size: cover;
+    background-position: center;
+}
+
+.navhero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        nav ul li a:hover {
+            color: #9A4DFF;
+            transition: 0.3s;
+        }
+
+.buttonhero {
+    border: none;
+    background: #9A4DFF;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+    .buttonhero:hover {
+        transform: scale(1.3);
+        cursor: pointer;
+    }

@@ -16,6 +16,8 @@
                 </div>
             </div>
         </div>
+        <br />
+
         <!--Include a location and date filter like Seatgeek-->
         <!--Seatgeek has a great process at which the homepage cards are decided by the location and date filter-->
         <!--Each card section will have cards of different services, but they will all be in same location given that people can only shop in the location their house is in, they don't care about offerings in other places-->
@@ -84,7 +86,6 @@
                 </div>
             </a>
         </div>
-
         <!-- ==== CARDS ==== -->
         <div class="card-container">
 
