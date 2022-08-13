@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Stera.Register1" %>
+﻿
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Stera.Register1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <html lang="en">
