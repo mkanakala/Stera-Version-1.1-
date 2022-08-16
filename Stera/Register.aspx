@@ -10,20 +10,22 @@
         <!-- Boxicons CSS -->
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     </head>
-
+    <form runat="server">
     <body>
         <section class="container forms">
             <div class="form login">
                 <div class="form-content">
                     <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input">
+                        <asp:TextBox runat="server" Enabled ="true" placeholder ="Email" ID="email"/>
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password">
+                        <asp:TextBox runat="server" Enabled ="true" placeholder ="Password" ID="pwd" CssClass="password"/>
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
-
+                    <div class="field button-field">
+                            <asp:Button ID="Button1" Text="Save" runat="server" type ="submit" OnClick="Button1_Click"/>
+                    </div>
                     <div class="form-link">
                         <a href="#" class="forgot-pass">Forgot password?</a>
                     </div>
@@ -48,7 +50,7 @@
                         <span>Login with Google</span>
                     </a>
                 </div>
-
+                <%=str %>
             </div>
 
 
@@ -57,5 +59,6 @@
         <!-- JavaScript -->
         <!--<script src="js/script.js"></script>-->
     </body>
+        </form>
 
 </asp:Content>

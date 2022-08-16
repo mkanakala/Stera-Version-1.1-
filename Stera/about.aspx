@@ -15,6 +15,7 @@
                     <div class="title">
                         <h1>About Us</h1>
                     </div>
+                    
                     <div class="content">
                         <h3>Our Mission</h3>
                         <p>

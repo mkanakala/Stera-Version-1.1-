@@ -34,7 +34,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    
         <div class="hero">
             <nav class="navhero">
                 <h2 class="logo">Stera</h2>
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </footer>
-    </form>
+    
     <script src="js/signup.js"></script>
 </body>
 </html>
