@@ -140,6 +140,7 @@
     <Content Include="js\script.js" />
     <Content Include="js\signup.js" />
     <Content Include="index.aspx" />
+    <Content Include="js\sweetalert.js" />
     <Content Include="scripts\signup.js" />
     <Content Include="SignUp.aspx" />
     <Content Include="Web.config" />

@@ -41,7 +41,7 @@ namespace Stera
                 {
                     if (da[2].Equals(pwdstr))
                     {
-                        str = "logged in";
+                        ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "posalert()", true);
                     }
                 }
 
@@ -49,7 +49,8 @@ namespace Stera
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                //Console.WriteLine(ex.ToString());
+                ClientScript.RegisterStartupScript(this.GetType(), "randomtext", "negalert()", true);
             }
 
             db.Close();
