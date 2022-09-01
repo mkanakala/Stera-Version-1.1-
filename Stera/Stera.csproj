@@ -114,6 +114,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="CSS\about.css" />
     <Content Include="CSS\coming_soon.css" />
+    <Content Include="CSS\contactus.css" />
     <Content Include="CSS\navbar.css" />
     <Content Include="CSS\pitch.css" />
     <Content Include="CSS\home.css" />
@@ -209,6 +210,8 @@
   <ItemGroup>
     <Content Include="MasterPage.Master" />
     <Content Include="images\sunset.webp" />
+    <Content Include="images\tools3.webp" />
+    <Content Include="images\yoyo.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
